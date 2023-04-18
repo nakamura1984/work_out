@@ -24,7 +24,5 @@
 | ------------- | ---------- | ------------------------------ |
 | user          | references | null: false, foreign_key: true |
 | calender      | references | null: false, foreign_key: true |
-| time_id       | integer    | null: false, foreign_key: true |
-| year_id    | integer    | null: false                    |
-| month_id   | integer    | null: false                    |
-| date_id    | integer    | null: false                    |
+| time_id       | integer    | null: false                    |
+| training      | integer    | null: false                    |
