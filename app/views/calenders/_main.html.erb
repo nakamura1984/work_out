@@ -1,0 +1,31 @@
+<div class="chat-header">
+  <div class="left-header">
+    <div class="header-title">
+        
+      </div>
+    </div>
+    <div class="right-header">
+      <div class="header-button">
+        
+        <a href="#">新規登録</a>
+        <a href="#">ログイン</a>
+        <a href="#">ログアウト</a>
+      </div>
+    </div>
+</div>
+
+<div class="messages">
+  <div class="col-md-8">
+  <%= month_calendar events: @calenders do |date, blogs| %>
+    <%= date.day %>
+
+    <% blogs.each do |blog| %>
+      <div>
+        <%= link_to blog.title, blog %>
+      </div>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="form">
+</div>
