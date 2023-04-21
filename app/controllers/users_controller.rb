@@ -9,6 +9,9 @@ class UsersController < ApplicationController
     else
       render :edit
     end
+
+  def destroy
+    @user = User.find(params[:id])
   end
 
   private
