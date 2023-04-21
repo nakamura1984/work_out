@@ -1,15 +1,14 @@
 <div class="chat-header">
   <div class="left-header">
     <div class="header-title">
-        
+        行動表
       </div>
     </div>
     <div class="right-header">
       <div class="header-button">
-        
-        <a href="#">新規登録</a>
-        <a href="#">ログイン</a>
-        <a href="#">ログアウト</a>
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <% end %>
       </div>
     </div>
 </div>
