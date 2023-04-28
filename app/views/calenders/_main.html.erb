@@ -3,6 +3,7 @@
     <div class="header-title">
         行動表
       </div>
+      <%= link_to 'イベント追加', new_memo_path  %>
     </div>
     <div class="right-header">
       <div class="header-button">
@@ -15,12 +16,12 @@
 
 <div class="messages">
   <div class="col-md-8">
-  <%= month_calendar events: @calenders do |date, blogs| %>
+  <%= month_calendar events: @calenders do |date, memos| %>
     <%= date.day %>
 
-    <% blogs.each do |blog| %>
+    <% memos.each do |memo| %>
       <div>
-        <%= link_to blog.title, blog %>
+        <%= link_to memo.title %>
       </div>
     <% end %>
   <% end %>
